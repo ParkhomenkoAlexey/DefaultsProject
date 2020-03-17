@@ -13,8 +13,8 @@ enum SexType: String {
     case female
 }
 
-class UserModel {
-    
+class UserModel: NSObject, NSCoding {
+   
     let name: String
     let surname: String
     let city: String
@@ -26,6 +26,20 @@ class UserModel {
         self.city = city
         self.sex = sex
     }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "name")
+        coder.encode(surname, forKey: "surname")
+        coder.encode(city, forKey: "city")
+        coder.encode(sex.rawValue, forKey: "sex")
+       }
+       
+       required init?(coder: NSCoder) {
+        name = coder.decodeObject(forKey: "name") as? String ?? ""
+        surname = coder.decodeObject(forKey: "surname") as? String ?? ""
+        city = coder.decodeObject(forKey: "city") as? String ?? ""
+        sex = SexType(rawValue: (coder.decodeObject(forKey: "sex") as! String)) ?? SexType.male
+       }
 }
 
 class ViewController: UIViewController {
@@ -45,13 +59,14 @@ class ViewController: UIViewController {
         
         cityPickerView.delegate = self
         cityPickerView.dataSource = self
+        
+        name.text = UserSettings.userModel.name
     }
 
     @IBAction func nameTextField(_ sender: Any) {
         print(name.text)
         
     }
-    
     
     @IBAction func surnameTextField(_ sender: Any) {
         print(surname.text)
@@ -72,6 +87,13 @@ class ViewController: UIViewController {
         
         guard let pickedCity = pickedCity, let pickedSex = pickedSex else { return }
         let userObject = UserModel(name: nameTrimmingText, surname: surnameTrimmingText, city: pickedCity, sex: pickedSex)
+        print("userObject", userObject)
+        
+        UserSettings.userName = nameTrimmingText
+        UserSettings.userModel = userObject
+        
+        print(UserSettings.userName)
+        print(UserSettings.userModel)
     }
 }
 
