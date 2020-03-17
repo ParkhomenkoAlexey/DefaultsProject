@@ -13,6 +13,7 @@
 		F0676CE024209F4B00C3F16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0676CDE24209F4B00C3F16C /* Main.storyboard */; };
 		F0676CE224209F4D00C3F16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0676CE124209F4D00C3F16C /* Assets.xcassets */; };
 		F0676CE524209F4D00C3F16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0676CE324209F4D00C3F16C /* LaunchScreen.storyboard */; };
+		F0676CED2420A80C00C3F16C /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0676CEC2420A80C00C3F16C /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F0676CE124209F4D00C3F16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0676CE424209F4D00C3F16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0676CE624209F4D00C3F16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0676CEC2420A80C00C3F16C /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F0676CD824209F4B00C3F16C /* AppDelegate.swift */,
 				F0676CDA24209F4B00C3F16C /* SceneDelegate.swift */,
 				F0676CDC24209F4B00C3F16C /* ViewController.swift */,
+				F0676CEC2420A80C00C3F16C /* UserSettings.swift */,
 				F0676CDE24209F4B00C3F16C /* Main.storyboard */,
 				F0676CE124209F4D00C3F16C /* Assets.xcassets */,
 				F0676CE324209F4D00C3F16C /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0676CDD24209F4B00C3F16C /* ViewController.swift in Sources */,
+				F0676CED2420A80C00C3F16C /* UserSettings.swift in Sources */,
 				F0676CD924209F4B00C3F16C /* AppDelegate.swift in Sources */,
 				F0676CDB24209F4B00C3F16C /* SceneDelegate.swift in Sources */,
 			);
